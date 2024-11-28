@@ -69,23 +69,36 @@ function App() {
                     setPassword(pass.target.value);
                   }}
                 />
-                <button className="signbtn" onClick={handleClick}>
-                  Sign Up
-                </button>
-                <p>
+                <p className="veryinfo">
                   To verify your number, we will send you a text message with a
                   temporary code. Message and data rates may apply.
                 </p>
+                <button className="signbtn" onClick={handleClick}>
+                  Sign Up
+                </button>
                 <div className="spanbox">
-                  <p>Buying for work?</p>
-                  <p>Shop on Amazon Business</p>
+                  <p>Buying for work? <br />
+                  <span>Create a free business account</span></p>
                 </div>
                 <div className="alac" onClick={() => setState(1)}>
-                  Already have an account? Login{" "}
+                  Already have an account? <span>Login</span>{" "}
                 </div>
+                <p className="agreement">
+                By creating an account or logging in, you agree to Amazon's <span> Conditions of Use </span> and <span> Privacy Notice.</span>
+                </p>
               </div>
             </div>
           </div>
+          <footer>
+            <div className="info">
+              <p>Conditions of Use</p>
+              <p>Privacy Notice</p>
+              <p>Help</p>
+            </div>
+            <div className="credit">
+              <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+            </div>
+          </footer>
         </div>
       ) : (
         <div>
@@ -110,14 +123,13 @@ function App() {
                 <button className="signbtn" onClick={handleLoginClick}>
                   Login
                 </button>
-                <p>
-                  By continuing, you agree to Amazon's Conditions of Use and
-                  Privacy Notice.
+                <p className="agreement">
+                  By continuing, you agree to Amazon's <span> Conditions of Use </span> and <span> Privacy Notice.</span>
                 </p>
-                <p>Need help?</p>
+                <p className="help">Need help?</p>
                 <div className="spanbox">
-                  <p>Buying for work?</p>
-                  <p>Shop on Amazon Business</p>
+                  <p>Buying for work? <br />
+                  <span>Shop on Amazon Business </span></p>
                 </div>
               </div>
             </div>
@@ -126,6 +138,16 @@ function App() {
               Create an account
             </button>
           </div>
+          <footer>
+            <div className="info">
+              <p>Conditions of Use</p>
+              <p>Privacy Notice</p>
+              <p>Help</p>
+            </div>
+            <div className="credit">
+              <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+            </div>
+          </footer>
         </div>
       )}
     </div>
