@@ -19,6 +19,13 @@ function App() {
     setArr([...arr, obj]);
     alert("SignUp Successfull");
     setState(0);
+
+    setName("")
+    setEmail("")
+    setPassword("")
+    setLoginEmail("")
+    setLoginPassword("")
+
   };
 
   const handleLoginClick = () => {
@@ -33,6 +40,15 @@ function App() {
     } else {
       alert("Invalid Email or Password");
     }
+    
+
+    setName("")
+    setEmail("")
+    setPassword("")
+    setLoginEmail("")
+    setLoginPassword("")
+
+
   };
   return (
     <div className="App">
@@ -48,7 +64,7 @@ function App() {
             <div className="box">
               <div className="mainbox">
                 <h3>Sign Up</h3>
-                <input
+                <input value={name}
                   type="text"
                   placeholder="Please Enter Your Name"
                   onChange={(name) => {
@@ -56,14 +72,14 @@ function App() {
                   }}
                 />
                 <input
-                  type="email"
+                  type="email" value={email}
                   placeholder="Please Enter Email"
                   onChange={(email) => {
                     setEmail(email.target.value);
                   }}
                 />
                 <input
-                  type="password"
+                  type="password" value={password}
                   placeholder="Please Enter Password"
                   onChange={(pass) => {
                     setPassword(pass.target.value);
@@ -77,14 +93,18 @@ function App() {
                   Sign Up
                 </button>
                 <div className="spanbox">
-                  <p>Buying for work? <br />
-                  <span>Create a free business account</span></p>
+                  <p>
+                    Buying for work? <br />
+                    <span>Create a free business account</span>
+                  </p>
                 </div>
                 <div className="alac" onClick={() => setState(1)}>
                   Already have an account? <span>Login</span>{" "}
                 </div>
                 <p className="agreement">
-                By creating an account or logging in, you agree to Amazon's <span> Conditions of Use </span> and <span> Privacy Notice.</span>
+                  By creating an account or logging in, you agree to Amazon's{" "}
+                  <span> Conditions of Use </span> and{" "}
+                  <span> Privacy Notice.</span>
                 </p>
               </div>
             </div>
@@ -106,7 +126,7 @@ function App() {
             <div className="loginbox">
               <div className="loginmainbox">
                 <h3>Login</h3>
-                <input
+                <input value={loginEmail}
                   type="email"
                   placeholder="Please Enter Email"
                   onChange={(loginemail) => {
@@ -114,7 +134,7 @@ function App() {
                   }}
                 />
                 <input
-                  type="password"
+                  type="password" value={loginPassword}
                   placeholder="Please Enter Password"
                   onChange={(loginpass) => {
                     setLoginPassword(loginpass.target.value);
@@ -124,12 +144,16 @@ function App() {
                   Login
                 </button>
                 <p className="agreement">
-                  By continuing, you agree to Amazon's <span> Conditions of Use </span> and <span> Privacy Notice.</span>
+                  By continuing, you agree to Amazon's{" "}
+                  <span> Conditions of Use </span> and{" "}
+                  <span> Privacy Notice.</span>
                 </p>
                 <p className="help">Need help?</p>
                 <div className="spanbox">
-                  <p>Buying for work? <br />
-                  <span>Shop on Amazon Business </span></p>
+                  <p>
+                    Buying for work? <br />
+                    <span>Shop on Amazon Business </span>
+                  </p>
                 </div>
               </div>
             </div>
